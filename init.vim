@@ -383,3 +383,9 @@ let g:rainbow_load_separately = [
 
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+
+" Speed up Syntax Highlight
+augroup vimrc
+    autocmd!
+    autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+augroup vimrc
